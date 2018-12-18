@@ -1,10 +1,14 @@
+ \usepackage[brazil]{babel}   
+
 % Comandos de dados - titulo do documento
 \newcommand{\titulo}[1]{\title{#1}}
 \newcommand{\imprimirtitulo}{\thetitle}
 
-% Comandos de dados - autor (use \and para multiplos autores)
+% Comandos de dados - autor (use \and para múltiplos autores)
 \newcommand{\autor}[1]{\author{#1}}
 \newcommand{\imprimirautor}{\theauthor}
+
+
 
 % Comandos de dados - data
 \let\olddate\date
@@ -12,11 +16,11 @@
 \newcommand{\data}[1]{\date{#1}}
 \newcommand{\imprimirdata}{
   \center
-  S\~ao Leopoldo
+  São Leopoldo
   \thedate
 }
 
-% Comandos de dados - instituicao
+% Comandos de dados - instituição
 \providecommand{\imprimirinstituicao}{}
 \newcommand{\instituicao}[1]{\renewcommand{\imprimirinstituicao}{#1}}
 
@@ -72,10 +76,9 @@
 
 % ---
 % Folha de rosto
-%   usar \imprimirfolhaderosto* casodeseje imprimir algo no verso da
+%   usar \imprimirfolhaderosto* caso deseje imprimir algo no verso da
 %   página no caso de estar no modo twoside. Util para imprimir a Ficha
-%   Bibliografica. Porem, se estiver no modo oneside, a versao sem estrela
-%   é identica.
+%   Bibliográfica. Porem, se estiver no modo oneside, a versao sem estrela é idêntica.
 \newenvironment{folhaderosto}[1][\folhaderostoname]{\clearpage}{\cleardoublepage}
 \newenvironment{folhaderosto*}[1][\folhaderostoname]{\clearpage}{\newpage}%
 
