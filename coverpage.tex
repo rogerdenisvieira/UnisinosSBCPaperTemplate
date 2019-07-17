@@ -1,4 +1,3 @@
- \usepackage[brazil]{babel}   
 
 % Comandos de dados - titulo do documento
 \newcommand{\titulo}[1]{\title{#1}}
@@ -8,16 +7,13 @@
 \newcommand{\autor}[1]{\author{#1}}
 \newcommand{\imprimirautor}{\theauthor}
 
-
-
 % Comandos de dados - data
 \let\olddate\date
 \renewcommand{\date}[1]{\AtBeginDocument{\olddate{#1}}}
 \newcommand{\data}[1]{\date{#1}}
 \newcommand{\imprimirdata}{
   \center
-  São Leopoldo
-  \thedate
+  \the\year
 }
 
 % Comandos de dados - instituição
@@ -104,9 +100,12 @@
      \end{minipage}
      \vspace*{\fill}
 
-    \large\imprimirorientadorRotulo
-    \imprimirorientador\par
-    \vspace*{\fill}
+    \begin{flushright}
+        \large\imprimirorientadorRotulo
+        \imprimirorientador\par
+        \vspace*{\fill}  
+    \end{flushright}
+
 
     \large\imprimirlocal
     \par
